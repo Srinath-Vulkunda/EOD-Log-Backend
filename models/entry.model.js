@@ -26,7 +26,7 @@ const entrySchema = new mongoose.Schema(
     },
     mood: {
       type: String,
-      enum: ['happy', 'neutral', 'tired', 'stressed', 'productive'],
+      enum: ['happy', 'neutral', 'tired', 'stressed', 'productive','calm'],
       default: 'neutral',
     },
     tags: {
