@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import connectDB from './config/db.config.js';
 import authRoutes from './routes/authRoutes.js';
 import entryRoutes from './routes/entryRoute.js';
+import goalsRoutes from './routes/goalsRoutes.js';
 
 dotenv.config({ quiet: true });
 const app = express();
@@ -14,6 +15,7 @@ app.use(express.json());
 
 app.use('/api/auth', authRoutes);
 app.use('/api/entries', entryRoutes);
+app.use('/api/goals', goalsRoutes);
 
 async function startSession() {
   try {
